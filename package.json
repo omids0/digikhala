@@ -9,7 +9,7 @@
     "lint": "next lint",
     "types": "tsc --pretty --noEmit",
     "prepare": "husky install",
-    "format": "prettier --write \"src/{components,app}/**/*.{ts,tsx,js,jsx}\""
+    "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx}\""
   },
   "dependencies": {
     "react": "^18",
@@ -17,7 +17,7 @@
     "next": "14.2.4"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "typescript": "5.3",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
