@@ -1,3 +1,5 @@
+import HomePage from 'src/components/home'
+
 export default function Home() {
-  return <div>salam khubi</div>
+  return <HomePage />
 }
