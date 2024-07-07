@@ -1,0 +1,6 @@
+.husk
+.vscode
+build
+public
+node_modules
+*.md

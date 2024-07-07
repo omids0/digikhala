@@ -1,0 +1,12 @@
+#!/bin/sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# build the prject
+yarn build ||
+(
+	echo 'Next build failed: View the errors.'
+	false;
+)
+
+# Now we can push
+echo '✅✅✅✅ Pushing to remote... ✅✅✅✅'

@@ -1,0 +1,28 @@
+#!/bin/sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo 'Styling, testing and building project before committing'
+
+# Check ESLint Standards
+yarn lint ||
+(
+	echo 'ESLint Check Failed. Make the required changes listed above and try to commit again.'
+	false; 
+)
+
+# Check Typescript standards
+yarn types ||
+(
+	echo 'Failed Type check. Make the changes required above.'
+	false;
+)
+
+# Check and apply Prettier standards
+yarn format ||
+(
+	echo 'Prettier Checking Failed.';
+	false;
+)
+
+# Now we can commit
+echo '✅✅✅✅ Committing the changes... ✅✅✅✅'

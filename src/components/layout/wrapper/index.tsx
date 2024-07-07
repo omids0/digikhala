@@ -1,9 +1,9 @@
 const Wrapper = ({
-  children,
+  children
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) => {
-  return <div className="max-w-6xl mx-auto">{children}</div>;
-};
+  return <div className="max-w-6xl mx-auto">{children}</div>
+}
 
-export default Wrapper;
+export default Wrapper
