@@ -2,16 +2,16 @@
 
 import { useQuery } from 'react-query'
 import { getAllProducts } from 'src/api/products/services'
-import Loading from '../common/loading'
 import Carousel from '../common/carousel'
 import Image from 'next/image'
 import Tiles from './tiles'
+import HandledJSX from '../common/handledJSX'
 
 const HomePage = () => {
   const { isLoading, isError, data } = useQuery('getAllProducts', getAllProducts)
 
   const handleCarouselContent = data => {
-    return data.map(item => ({
+    return data?.map(item => ({
       element: (
         <div className="flex items-center justify-center w-full bg-gradient-to-b from-red-50 to-transparent rounded-xl p-8 gap-10 min-h-[30rem]">
           <div className="min-w-[20rem] max-w-[20rem] min-h-[25rem] max-h-[25rem] flex flex-col items-center gap-6 mb-6">
@@ -30,22 +30,18 @@ const HomePage = () => {
     }))
   }
 
-  if (isLoading) {
-    return <Loading />
-  } else if (isError) {
-    return <>error</>
-  }
-
   return (
-    <div className="flex flex-col">
-      <Carousel contentData={handleCarouselContent(data)} />
-      <div className="flex w-full justify-between flex-wrap mt-16">
-        <Tiles category="electronics" />
-        <Tiles category="jeweler" />
-        <Tiles category="menClothes" />
-        <Tiles category="womenClothes" />
+    <HandledJSX isLoading={isLoading} isError={isError}>
+      <div className="flex flex-col">
+        <Carousel contentData={handleCarouselContent(data)} />
+        <div className="flex w-full justify-between flex-wrap mt-16">
+          <Tiles category="electronics" />
+          <Tiles category="jeweler" />
+          <Tiles category="menClothes" />
+          <Tiles category="womenClothes" />
+        </div>
       </div>
-    </div>
+    </HandledJSX>
   )
 }
 
