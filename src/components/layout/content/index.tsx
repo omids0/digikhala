@@ -6,7 +6,7 @@ const MainContent = ({
   children: React.ReactNode
 }>) => {
   return (
-    <div className="p-2 md:p-4">
+    <div className="p-2 md:p-4 min-h-[85vh]">
       <Wrapper>{children}</Wrapper>
     </div>
   )
