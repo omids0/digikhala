@@ -13,16 +13,18 @@ const HomePage = () => {
   const handleCarouselContent = data => {
     return data?.map(item => ({
       element: (
-        <div className="flex items-center justify-center w-full bg-gradient-to-b from-red-50 to-transparent rounded-xl p-8 gap-10 min-h-[30rem]">
-          <div className="min-w-[20rem] max-w-[20rem] min-h-[25rem] max-h-[25rem] flex flex-col items-center gap-6 mb-6">
-            <p className="font-bold items-end text-gray-800">{item.title}</p>
+        <div className="flex items-center justify-center w-full bg-gradient-to-b from-red-50 to-transparent rounded-xl p-8 gap-10 md:min-h-[30rem] min-h-[20rem]">
+          <div className="min-w-[20rem] max-w-[20rem] md:min-h-[25rem] min-h-[20rem] md:max-h-[25rem] max-h-[20rem] flex flex-col items-center gap-6 mb-6">
+            <p className="font-bold items-end text-gray-800 md:text-[1.2rem] text-[.9rem]">
+              {item.title}
+            </p>
             <Image
               src={item.image}
               width={1000}
               height={1000}
               alt={item.title}
               loading="lazy"
-              className="max-w-[15rem] min-w-[15rem] max-h-[20rem] rounded-lg"
+              className="md:max-w-[15rem] max-w-[11rem] md:min-w-[15rem] min-w-[11rem] max-h-[20rem] rounded-lg"
             />
           </div>
         </div>

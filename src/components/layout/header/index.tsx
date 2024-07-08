@@ -5,14 +5,16 @@ const MainHeader = () => {
     <div className="p-2 md:p-4">
       <Wrapper>
         <div className="flex justify-between items-center">
-          <span className="font-semibold text-red-400 text-[1.8rem]">Digikhala</span>
+          <span className="font-semibold text-red-400 md:text-[1.8rem] text-[1.2rem]">
+            Digikhala
+          </span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
             strokeWidth={1.5}
             stroke="currentColor"
-            className="size-8 text-red-400"
+            className="md:size-8 size-6 text-red-400"
           >
             <path
               strokeLinecap="round"

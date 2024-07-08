@@ -20,7 +20,7 @@ const Tiles = ({ category }: IProps) => {
         viewBox="0 0 24 24"
         strokeWidth={1.5}
         stroke="currentColor"
-        className="size-16"
+        className="size-10 md:size-16"
       >
         <path
           strokeLinecap="round"
@@ -36,7 +36,7 @@ const Tiles = ({ category }: IProps) => {
         viewBox="0 0 24 24"
         strokeWidth={1.5}
         stroke="currentColor"
-        className="size-16"
+        className="size-10 md:size-16"
       >
         <path
           strokeLinecap="round"
@@ -52,7 +52,7 @@ const Tiles = ({ category }: IProps) => {
         viewBox="0 0 24 24"
         strokeWidth={1.5}
         stroke="currentColor"
-        className="size-16"
+        className="size-10 md:size-16"
       >
         <path
           strokeLinecap="round"
@@ -68,7 +68,7 @@ const Tiles = ({ category }: IProps) => {
         viewBox="0 0 24 24"
         strokeWidth={1.5}
         stroke="currentColor"
-        className="size-16"
+        className="size-10 md:size-16"
       >
         <path
           strokeLinecap="round"
@@ -80,7 +80,7 @@ const Tiles = ({ category }: IProps) => {
   }
 
   return (
-    <div className="w-[10rem] h-[10rem] rounded-md p-2 cursor-pointer border-[1px] border-red-100 hover:border-red-200 flex flex-col justify-center items-center gap-2 text-red-400 hover:text-red-500 m-2 hover:bg-red-50">
+    <div className="mx-auto w-[10rem] h-[10rem] rounded-md p-2 cursor-pointer border-[1px] border-red-100 hover:border-red-200 flex flex-col justify-center items-center gap-2 text-red-400 hover:text-red-500 m-2 hover:bg-red-50">
       {categoriesIcon[category]}
       <span className=" font-semibold first-letter:uppercase">{categoriesTitle[category]}</span>
     </div>
