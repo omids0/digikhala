@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import Wrapper from '../wrapper'
 
 const MainHeader = () => {
@@ -5,9 +6,9 @@ const MainHeader = () => {
     <div className="p-2 md:p-4">
       <Wrapper>
         <div className="flex justify-between items-center">
-          <span className="font-semibold text-red-400 md:text-[1.8rem] text-[1.2rem]">
+          <Link href="/" className="font-semibold text-red-400 md:text-[1.8rem] text-[1.2rem]">
             Digikhala
-          </span>
+          </Link>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"

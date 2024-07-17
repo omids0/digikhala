@@ -13,10 +13,10 @@ interface Response {
   title: string
 }
 
-const getAllProducts = async (data): Promise<Response[]> => {
-  const response = await axios.get(ProductsEndpointEnum.allProducts, data)
+const getAllProductsApi = async (): Promise<Response[]> => {
+  const response = await axios.get(ProductsEndpointEnum.allProducts)
 
   return response.data
 }
 
-export { getAllProducts }
+export { getAllProductsApi }

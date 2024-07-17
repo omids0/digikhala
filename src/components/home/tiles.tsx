@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 type TCategories = 'electronics' | 'jeweler' | 'menClothes' | 'womenClothes'
 
 interface IProps {
@@ -80,10 +82,13 @@ const Tiles = ({ category }: IProps) => {
   }
 
   return (
-    <div className="mx-auto w-[10rem] h-[10rem] rounded-md p-2 cursor-pointer border-[1px] border-red-100 hover:border-red-200 flex flex-col justify-center items-center gap-2 text-red-400 hover:text-red-500 m-2 hover:bg-red-50">
+    <Link
+      href={`./${categoriesTitle[category]}`}
+      className="transition ease-in-out delay-150 duration-300 mx-auto w-[10rem] h-[10rem] rounded-md p-2 cursor-pointer border-[1px] border-red-100 hover:border-red-200 flex flex-col justify-center items-center gap-2 text-red-400 hover:text-red-500 m-2 hover:bg-red-50"
+    >
       {categoriesIcon[category]}
       <span className=" font-semibold first-letter:uppercase">{categoriesTitle[category]}</span>
-    </div>
+    </Link>
   )
 }
 
