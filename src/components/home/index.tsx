@@ -42,7 +42,7 @@ const HomePage = () => {
         <Carousel contentData={handleCarouselContent(data)} />
         <div className="flex w-full justify-between flex-wrap mt-16">
           <Tiles category="electronics" />
-          <Tiles category="jeweler" />
+          <Tiles category="jewelery" />
           <Tiles category="menClothes" />
           <Tiles category="womenClothes" />
         </div>

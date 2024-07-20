@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-type TCategories = 'electronics' | 'jeweler' | 'menClothes' | 'womenClothes'
+type TCategories = 'electronics' | 'jewelery' | 'menClothes' | 'womenClothes'
 
 interface IProps {
   category: TCategories
@@ -9,7 +9,7 @@ interface IProps {
 const Tiles = ({ category }: IProps) => {
   const categoriesTitle = {
     electronics: 'electronics',
-    jeweler: 'jeweler',
+    jewelery: 'jewelery',
     menClothes: "men's clothing",
     womenClothes: "women's clothing"
   }
@@ -31,7 +31,7 @@ const Tiles = ({ category }: IProps) => {
         />
       </svg>
     ),
-    jeweler: (
+    jewelery: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"

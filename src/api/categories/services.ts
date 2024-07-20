@@ -1,19 +1,24 @@
 import axios from 'axios'
 import { CategoriesEndpointEnum } from './endpoints'
 
-interface Response {
+export interface IRating {
+  rate: number
+  count: number
+}
+
+export interface IResponse {
   category: string
   description: string
   id: number
   image: string
   price: number
-  rating: { rate: number; count: number }
+  rating: IRating
   count: number
   rate: number
   title: string
 }
 
-const getCategoriesApi = async (data): Promise<Response[]> => {
+const getCategoriesApi = async (data): Promise<IResponse[]> => {
   const {
     queryKey: [_, params]
   } = data
