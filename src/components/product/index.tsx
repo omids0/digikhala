@@ -4,6 +4,8 @@ import { useParams } from 'next/navigation'
 import { useQuery } from 'react-query'
 import { getSingleProductApi } from 'src/api/product/services'
 import HandledJSX from '../common/handledJSX'
+import ProductMobilePage from './product.mobile'
+import ProductDesktopPage from './product.desktop'
 
 const ProductPage = () => {
   const { id } = useParams()
@@ -22,7 +24,8 @@ const ProductPage = () => {
 
   return (
     <HandledJSX isLoading={isLoading} isError={isError}>
-      {data?.title}
+      <ProductMobilePage data={data} />
+      <ProductDesktopPage data={data} />
     </HandledJSX>
   )
 }
