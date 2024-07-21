@@ -2,10 +2,10 @@
 
 import { useQuery } from 'react-query'
 import { getAllProductsApi } from 'src/api/products/services'
-import Carousel from '../common/carousel'
+import Carousel from '../../common/carousel'
 import Image from 'next/image'
 import Tiles from './tiles'
-import HandledJSX from '../common/handledJSX'
+import HandledJSX from '../../common/handledJSX'
 import Link from 'next/link'
 
 const HomePage = () => {

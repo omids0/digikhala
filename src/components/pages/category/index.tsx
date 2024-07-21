@@ -3,7 +3,7 @@
 import { useParams } from 'next/navigation'
 import { useQuery } from 'react-query'
 import { getCategoriesApi } from 'src/api/categories/services'
-import HandledJSX from '../common/handledJSX'
+import HandledJSX from '../../common/handledJSX'
 import CategoryCard from './categoryCart'
 
 const CategoryPage = () => {

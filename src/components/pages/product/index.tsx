@@ -3,7 +3,7 @@
 import { useParams } from 'next/navigation'
 import { useQuery } from 'react-query'
 import { getSingleProductApi } from 'src/api/product/services'
-import HandledJSX from '../common/handledJSX'
+import HandledJSX from '../../common/handledJSX'
 import ProductMobilePage from './product.mobile'
 import ProductDesktopPage from './product.desktop'
 
