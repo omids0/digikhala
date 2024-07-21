@@ -3,9 +3,9 @@ import Wrapper from '../wrapper'
 
 const MainHeader = () => {
   return (
-    <div className="p-2 md:p-4">
+    <div className="p-2 md:p-4 sticky top-0 bg-white z-50">
       <Wrapper>
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-center ">
           <Link href="/" className="font-semibold text-red-400 md:text-[1.8rem] text-[1.2rem]">
             Digikhala
           </Link>
